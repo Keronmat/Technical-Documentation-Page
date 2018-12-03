@@ -1,0 +1,783 @@
+<!DOCTYPE html lang="en">
+
+<head>
+    <title>Python Documentation page</title>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn about Python">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="icon" href="./logo.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <nav id="navbar">
+        <header>
+            <a href="#The_Python_Tutorial">
+                <h1>The Python Tutorial</h1>
+            </a>
+        </header>
+        <ul class="menu-one">
+            <li>
+                <a class="nav-link" href="#Whetting_Your_Appetite">1. Whetting Your Appetite </a>
+            </li>
+            <li>
+                <a id="test" class="nav-link" href="#Using_the_Python_Interpreter">2. Using the Python Interpreter </a>
+                <i class="fas fa-caret-right"></i>
+                <ul class="nav-flyout menu-two">
+                    <li>
+                        <a class="nav-link" href="#Invoking_the_Interpreter">2.1. Invoking the Interpreter </a> <i
+                            class="fas fa-caret-right"></i>
+                        <ul class="nav-flyout-two">
+                            <li>
+                                <a class="nav-link" href="#Argument_Passing">2.1.1. Argument Passing</a>
+                            </li>
+                            <li>
+                                <a class="nav-link " href="#Interactive_Mode">2.1.2. Interactive Mode</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#The_Interpreter_and_Its_Environment">2.2. The Interpreter and Its
+                            Environment </a> <i class="fas fa-caret-right"></i>
+                        <ul class="nav-flyout-two">
+                            <li>
+                                <a class="nav-link " href="#Source_Code_Encoding">2.2.1. Source Code Encoding</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="nav-link" href="#An_Informal_Introduction_to_Python">3. An Informal Introduction to Python a</a>
+                <i class="fas fa-caret-right"></i>
+                <ul class="nav-flyout menu-two">
+                    <li>
+                        <a class="nav-link " href="#Using_Python_as_a_Calculator">3.1 Using Python as a Calculator</a>
+                        <i class="fas fa-caret-right"></i>
+                        <ul class="nav-flyout-two">
+                            <li>
+                                <a class="nav-link" href="#Numbers">3.1.1 Numbers</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#Strings">3.1.2 Strings</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="#Lists">3.1.3 Lists</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#First_Steps_Towards_Programming">3.2 First Steps Towards Programming</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="nav-link" href="#More_Control_Flow_Tools">4. More Control Flow Tools</a>
+            </li>
+            <li>
+                <a class="nav-link" href="#Data_Structures">5. Data Structures</a>
+            </li>
+        </ul>
+        <footer>Documentation came from by <a href="https://docs.python.org/3/tutorial/index.html">Python.org</a></footer>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="The_Python_Tutorial">
+            <header>
+                <h1>The Python Tutorial</h1>
+            </header>
+            <article>
+                <p>Python is an easy to learn, powerful programming language. It has efficient high-level data
+                    structures and a simple but effective approach to object-oriented programming. Python’s elegant
+                    syntax and dynamic typing, together with its interpreted
+                    nature, make it an ideal language for scripting and rapid application development in many areas on
+                    most platforms.</p>
+                <p>The Python interpreter and the extensive standard library are freely available in source or binary
+                    form for all major platforms from the Python Web site, <a href="https://www.python.org/">https://www.python.org/</a>,
+                    and may be freely distributed.
+                    The same site also contains distributions of and pointers to many free third party Python modules,
+                    programs and tools, and additional documentation.</p>
+                <p> The Python interpreter is easily extended with new functions and data types implemented in C or C++
+                    (or other languages callable from C). Python is also suitable as an extension language for
+                    customizable applications.</p>
+                <p>This tutorial introduces the reader informally to the basic concepts and features of the Python
+                    language and system. It helps to have a Python interpreter handy for hands-on experience, but all
+                    examples are self-contained, so the tutorial can
+                    be read off-line as well.</p>
+                <p>For a description of standard objects and modules, see <a href="https://docs.python.org/3/library/index.html#library-index"
+                        target="_blank">The Python Standard Library.</a><a href="https://docs.python.org/3/reference/index.html#reference-index">
+                        The Python Language Reference </a>gives
+                    a more formal definition of the language. To write extensions in C or C++, read <a href="https://docs.python.org/3/extending/index.html#extending-index">Extending
+                        and Embedding the Python Interpreter</a> and <a href="https://docs.python.org/3/c-api/index.html#c-api-index">Python/C
+                        API Reference Manual.</a> There are also several books covering Python in depth.</p>
+                <p>This tutorial does not attempt to be comprehensive and cover every single feature, or even every
+                    commonly used feature. Instead, it introduces many of Python’s most noteworthy features, and will
+                    give you a good idea of the language’s flavor and
+                    style. After reading it, you will be able to read and write Python modules and programs, and you
+                    will be ready to learn more about the various Python library modules described in <a href="https://docs.python.org/3/library/index.html#library-index">The
+                        Python Standard Library.</a></p>
+            </article>
+        </section>
+        <section class="main-section" id="Whetting_Your_Appetite">
+            <header>
+                <h1>1. Whetting Your Appetite</h1>
+            </header>
+            <article>
+                <p>
+                    if you do much work on computers, eventually you find that there’s some task you’d like to
+                    automate. For example, you may wish to perform a search-and-replace over a large number of text
+                    files, or rename and rearrange a bunch of photo files in a complicated
+                    way. Perhaps you’d like to write a small custom database, or a specialized GUI application, or a
+                    simple game.</p>
+
+                <p> If you’re a professional software developer, you may have to work with several C/C++/Java libraries
+                    but find the usual write/compile/test/re-compile cycle is too slow. Perhaps you’re writing a test
+                    suite for such a library and find writing the
+                    testing code a tedious task. Or maybe you’ve written a program that could use an extension
+                    language, and you don’t want to design and implement a whole new language for your application.</p>
+
+                <p> Python is just the language for you.</p>
+
+                <p> You could write a Unix shell script or Windows batch files for some of these tasks, but shell
+                    scripts are best at moving around files and changing text data, not well-suited for GUI
+                    applications or games. You could write a C/C++/Java program,
+                    but it can take a lot of development time to get even a first-draft program. Python is simpler to
+                    use, available on Windows, Mac OS X, and Unix operating systems, and will help you get the job done
+                    more quickly.</p>
+
+                <p> Python is simple to use, but it is a real programming language, offering much more structure and
+                    support for large programs than shell scripts or batch files can offer. On the other hand, Python
+                    also offers much more error checking than C, and,
+                    being a very-high-level language, it has high-level data types built in, such as flexible arrays
+                    and dictionaries. Because of its more general data types Python is applicable to a much larger
+                    problem domain than Awk or even Perl, yet many things
+                    are at least as easy in Python as in those languages.</p>
+                <p>Python allows you to split your program into modules that can be reused in other Python programs. It
+                    comes with a large collection of standard modules that you can use as the basis of your programs —
+                    or as examples to start learning to program
+                    in Python. Some of these modules provide things like file I/O, system calls, sockets, and even
+                    interfaces to graphical user interface toolkits like Tk.</p>
+
+                <p> Python is an interpreted language, which can save you considerable time during program development
+                    because no compilation and linking is necessary. The interpreter can be used interactively, which
+                    makes it easy to experiment with features of the
+                    language, to write throw-away programs, or to test functions during bottom-up program development.
+                    It is also a handy desk calculator.</p>
+                </p>
+                <p>Python enables programs to be written compactly and readably. Programs written in Python are
+                    typically much shorter than equivalent C, C++, or Java programs, for several reasons:
+                    <ul>
+                        <li>the high-level data types allow you to express complex operations in a single statement;
+                        </li>
+                        <li> statement grouping is done by indentation instead of beginning and ending brackets;</li>
+                        <li>no variable or argument declarations are necessary. </li>
+                    </ul>
+                </p>
+                <p>
+                    Python is extensible: if you know how to program in C it is easy to add a new built-in function or
+                    module to the interpreter, either to perform critical operations at maximum speed, or to link
+                    Python programs to libraries that may only be available in
+                    binary form (such as a vendor-specific graphics library). Once you are really hooked, you can link
+                    the Python interpreter into an application written in C and use it as an extension or command
+                    language for that application.
+                </p>
+                <p>
+                    By the way, the language is named after the BBC show “Monty Python’s Flying Circus” and has nothing
+                    to do with reptiles. Making references to Monty Python skits in documentation is not only allowed,
+                    it is encouraged!
+                </p>
+                <p>
+                    Now that you are all excited about Python, you’ll want to examine it in some more detail. Since the
+                    best way to learn a language is to use it, the tutorial invites you to play with the Python
+                    interpreter as you read.
+                </p>
+                <p>
+                    In the next chapter, the mechanics of using the interpreter are explained. This is rather mundane
+                    information, but essential for trying out the examples shown later.
+                </p>
+                <p>
+                    The rest of the tutorial introduces various features of the Python language and system through
+                    examples, beginning with simple expressions, statements and data types, through functions and
+                    modules, and finally touching upon advanced concepts like exceptions
+                    and user-defined classes.
+                </p>
+
+            </article>
+        </section>
+
+        <section class="main-section" id="Using_the_Python_Interpreter">
+            <header>
+                <h1> 2. Using the Python Interpreter</h1>
+            </header>
+            <article id="Invoking_the_Interpreter">
+                <h2>2.1. Invoking the Interpreter</h2>
+                <p>
+                    The Python interpreter is usually installed as <span class="commands">/usr/local/bin/python3.7
+                    </span>on those machines where it is available; putting <span class="commands">/usr/local/bin
+                    </span> in your Unix shell’s search path makes it possible
+                    to start it by typing the command:
+                </p>
+                <code>python3.7</code>
+                <p>
+                    to the shell. <a href="https://docs.python.org/3/tutorial/interpreter.html#id2">[1]</a> Since the
+                    choice of the directory where the interpreter lives is an installation option, other places are
+                    possible; check with your local Python guru or
+                    system administrator. (E.g., <span class="commands"> /usr/local/python </span> is a popular
+                    alternative location.)
+                </p>
+                <p>
+                    On Windows machines, the Python installation is usually placed in <span class="commands">C:\Python36
+                    </span>, though you can change this when you’re running the installer. To add this directory to
+                    your path, you can type the following command
+                    into the command prompt in a DOS box:
+                </p>
+                <code>
+                    set path=%path%;C:\python36
+                </code>
+                <p>
+                    Typing an end-of-file character (Control-D on Unix, Control-Z on Windows) at the primary prompt
+                    causes the interpreter to exit with a zero exit status. If that doesn’t work, you can exit the
+                    interpreter by typing the following command: quit().
+                </p>
+                <p>
+                    The interpreter’s line-editing features include interactive editing, history substitution and code
+                    completion on systems that support readline. Perhaps the quickest check to see whether command line
+                    editing is supported is typing Control-P to the first
+                    Python prompt you get. If it beeps, you have command line editing; see Appendix <a href="https://docs.python.org/3/tutorial/interactive.html#tut-interacting">Interactive
+                        Input Editing and History Substitution </a> for an introduction
+                    to the keys. If nothing appears to happen, or if ^P is echoed, command line editing isn’t
+                    available; you’ll only be able to use backspace to remove characters from the current line.
+                </p>
+                <p>
+                    The interpreter operates somewhat like the Unix shell: when called with standard input connected to
+                    a tty device, it reads and executes commands interactively; when called with a file name argument
+                    or with a file as standard input, it reads and executes
+                    a script from that file.
+                </p>
+                <p>
+                    A second way of starting the interpreter is python -c command [arg] ..., which executes the
+                    statement(s) in command, analogous to the shell’s -c option. Since Python statements often contain
+                    spaces or other characters that are special to the shell, it
+                    is usually advised to quote command in its entirety with single quotes.
+                </p>
+                <p>
+                    Some Python modules are also useful as scripts. These can be invoked using python -m module [arg]
+                    ..., which executes the source file for module as if you had spelled out its full name on the
+                    command line.
+                </p>
+                <p>
+                    When a script file is used, it is sometimes useful to be able to run the script and enter
+                    interactive mode afterwards. This can be done by passing -i before the script.<br /> All command
+                    line options are described in Command line and environment.
+                </p>
+            </article>
+            <article>
+                <h3 id="Argument_Passing">2.1.1. Argument Passing</h3>
+                <p>
+                    When known to the interpreter, the script name and additional arguments thereafter are turned into
+                    a list of strings and assigned to the argv variable in the sys module. You can access this list by
+                    executing import sys. The length of the list is at least
+                    one; when no script and no arguments are given, sys.argv[0] is an empty string. When the script
+                    name is given as '-' (meaning standard input), sys.argv[0] is set to '-'. When -c command is used,
+                    sys.argv[0] is set to '-c'. When -m module is
+                    used, sys.argv[0] is set to the full name of the located module. Options found after -c command or
+                    -m module are not consumed by the Python interpreter’s option processing but left in sys.argv for
+                    the command or module to handle.
+                </p>
+
+                <h3 id="Interactive_Mode">2.1.2. Interactive Mode</h3>
+                <p>
+                    When commands are read from a tty, the interpreter is said to be in interactive mode. In this mode
+                    it prompts for the next command with the primary prompt, usually three greater-than signs (>>>);
+                    for continuation lines it prompts with the secondary prompt,
+                    by default three dots (...). The interpreter prints a welcome message stating its version number
+                    and a copyright notice before printing the first prompt:
+
+                    <code>
+                        $ python3.7
+                        Python 3.7 (default, Sep 16 2015, 09:25:04)
+                        [GCC 4.8.2] on linux
+                        Type "help", "copyright", "credits" or "license" for more information.
+                        >>>
+                    </code> Continuation lines are needed when entering a multi-line construct. As an example, take a
+                    look at this if statement:
+                    <code>
+                        >>> the_world_is_flat = True
+                        >>> if the_world_is_flat:
+                        ... print("Be careful not to fall off!")
+                        ...
+                        Be careful not to fall off!
+                    </code> For more on interactive mode, see <a href="https://docs.python.org/3/tutorial/appendix.html#tut-interac">Interactive
+                        Mode</a>.
+                </p>
+            </article>
+            <article id="The_Interpreter_and_Its_Environment">
+                <h2>The Interpreter and Its Environment</h2>
+                <h3 id="Source_Code_Encoding">Source Code Encoding</h3>
+                <p>
+                    By default, Python source files are treated as encoded in UTF-8. In that encoding, characters of
+                    most languages in the world can be used simultaneously in string literals, identifiers and comments
+                    — although the standard library only uses ASCII characters
+                    for identifiers, a convention that any portable code should follow. To display all these characters
+                    properly, your editor must recognize that the file is UTF-8, and it must use a font that supports
+                    all the characters in the file.<br /> To declare an encoding other than the default one, a special
+                    comment line should be added as the first line of the file. The syntax is as follows:
+                    <code>
+                        # -*- coding: encoding -*-
+                    </code> where encoding is one of the valid codecs supported by Python. For example, to declare that
+                    Windows-1252 encoding is to be used, the first line of your source code file should be:
+                    <code>
+                        # -*- coding: cp1252 -*-
+                    </code> One exception to the first line rule is when the source code starts with a UNIX “shebang”
+                    line. In this case, the encoding declaration should be added as the second line of the file. For
+                    example:
+                    <code>
+                        #!/usr/bin/env python3
+                        # -*- coding: cp1252 -*-
+                    </code>
+                </p>
+            </article>
+        </section>
+        <section class="main-section" id="An_Informal_Introduction_to_Python">
+            <header>
+                <h1> 3. An Informal Introduction to Python</h1>
+            </header>
+            <article>
+                <p>
+                    In the following examples, input and output are distinguished by the presence or absence of prompts
+                    (>>> and …): to repeat the example, you must type everything after the prompt, when the prompt
+                    appears; lines that do not begin with a prompt are output
+                    from the interpreter. Note that a secondary prompt on a line by itself in an example means you must
+                    type a blank line; this is used to end a multi-line command. Many of the examples in this manual,
+                    even those entered at the interactive prompt,
+                    include comments. Comments in Python start with the hash character, #, and extend to the end of the
+                    physical line. A comment may appear at the start of a line or following whitespace or code, but not
+                    within a string literal. A hash character
+                    within a string literal is just a hash character. Since comments are to clarify code and are not
+                    interpreted by Python, they may be omitted when typing in examples.<br /> Some examples:
+                </p>
+                <code># this is the first comment
+                    spam = 1 # and this is the second comment
+                    # ... and now a third!
+                    text = "# This is not a comment because it's inside quotes."
+                </code>
+                <h2 id="Using_Python_as_a_Calculator">3.1. Using Python as a Calculator</h2>
+                <p>
+                    Let’s try some simple Python commands. Start the interpreter and wait for the primary prompt, >>>.
+                    (It shouldn’t take long.)
+                </p>
+                <h3 id="Numbers">3.1.1. Numbers</h3>
+                <p>
+                    The interpreter acts as a simple calculator: you can type an expression at it and it will write the
+                    value. Expression syntax is straightforward: the operators +, -, * and / work just like in most
+                    other languages (for example, Pascal or C); parentheses
+                    (()) can be used for grouping. For example:
+                    <code>
+                        >>> 2 + 2
+                        4
+                        >>> 50 - 5*6
+                        20
+                        >>> (50 - 5*6) / 4
+                        5.0
+                        >>> 8 / 5 # division always returns a floating point number
+                        1.6
+                    </code> The integer numbers (e.g. 2, 4, 20) have type int, the ones with a fractional part (e.g.
+                    5.0, 1.6) have type float. We will see more about numeric types later in the tutorial. Division (/)
+                    always returns a float. To do floor
+                    division and get an integer result (discarding any fractional result) you can use the // operator;
+                    to calculate the remainder you can use %:
+
+                    <code>
+                        >>> 17 / 3 # classic division returns a float
+                        5.666666666666667
+                        >>>
+                        >>> 17 // 3 # floor division discards the fractional part
+                        5
+                        >>> 17 % 3 # the % operator returns the remainder of the division
+                        2
+                        >>> 5 * 3 + 2 # result * divisor + remainder
+                        17
+                    </code> With Python, it is possible to use the ** operator to calculate powers [1]:
+                    <code>
+                        >>> 5 ** 2 # 5 squared
+                        25
+                        >>> 2 ** 7 # 2 to the power of 7
+                        128
+                    </code> The equal sign (=) is used to assign a value to a variable. Afterwards, no result is
+                    displayed before the next interactive prompt:
+                    <code>
+                        >>> width = 20
+                        >>> height = 5 * 9
+                        >>> width * height
+                        900
+                    </code> If a variable is not “defined” (assigned a value), trying to use it will give you an error:
+                    <code>
+                        >>> n # try to access an undefined variable
+                        Traceback (most recent call last):
+                        File "<stdin>", line 1, in <module>
+                                NameError: name 'n' is not defined
+                    </code> There is full support for floating point; operators with mixed type operands convert the
+                    integer operand to floating point:
+                    <code>
+                        >>> 4 * 3.75 - 1
+                        14.0
+                    </code> In interactive mode, the last printed expression is assigned to the variable _. This means
+                    that when you are using Python as a desk calculator, it is somewhat easier to continue
+                    calculations, for example:
+                    <code>
+                        >>> tax = 12.5 / 100
+                        >>> price = 100.50
+                        >>> price * tax
+                        12.5625
+                        >>> price + _
+                        113.0625
+                        >>> round(_, 2)
+                        113.06
+                    </code> This variable should be treated as read-only by the user. Don’t explicitly assign a value
+                    to it — you would create an independent local variable with the same name masking the built-in
+                    variable with its magic behavior. In addition
+                    to int and float, Python supports other types of numbers, such as Decimal and Fraction. Python also
+                    has built-in support for complex numbers, and uses the j or J suffix to indicate the imaginary part
+                    (e.g. 3+5j).
+
+                </p>
+                <h3 id="Strings"> 3.1.2. Strings</h3>
+                <p>
+                    Besides numbers, Python can also manipulate strings, which can be expressed in several ways. They
+                    can be enclosed in single quotes ('...') or double quotes ("...") with the same result [2]. \ can
+                    be used to escape quotes:
+
+                    <code>
+                        >>> 'spam eggs' # single quotes
+                        'spam eggs'
+                        >>> 'doesn\'t' # use \' to escape the single quote...
+                        "doesn't"
+                        >>> "doesn't" # ...or use double quotes instead
+                        "doesn't"
+                        >>> '"Yes," they said.'
+                        '"Yes," they said.'
+                        >>> "\"Yes,\" they said."
+                        '"Yes," they said.'
+                        >>> '"Isn\'t," they said.'
+                        '"Isn\'t," they said.'
+                    </code> In the interactive interpreter, the output string is enclosed in quotes and special
+                    characters are escaped with backslashes. While this might sometimes look different from the input
+                    (the enclosing quotes could change), the two strings
+                    are equivalent. The string is enclosed in double quotes if the string contains a single quote and
+                    no double quotes, otherwise it is enclosed in single quotes. The print() function produces a more
+                    readable output, by omitting the enclosing quotes
+                    and by printing escaped and special characters:
+
+                    <code>
+                        >>> '"Isn\'t," they said.'
+                        '"Isn\'t," they said.'
+                        >>> print('"Isn\'t," they said.')
+                        "Isn't," they said.
+                        >>> s = 'First line.\nSecond line.' # \n means newline
+                        >>> s # without print(), \n is included in the output
+                        'First line.\nSecond line.'
+                        >>> print(s) # with print(), \n produces a new line
+                        First line.
+                        Second line.
+                    </code> If you don’t want characters prefaced by \ to be interpreted as special characters, you can
+                    use raw strings by adding an r before the first quote:
+                    <code>
+                        >>> print('C:\some\name') # here \n means newline!
+                        C:\some
+                        ame
+                        >>> print(r'C:\some\name') # note the r before the quote
+                        C:\some\name
+                    </code> String literals can span multiple lines. One way is using triple-quotes: """...""" or
+                    '''...'''. End of lines are automatically included in the string, but it’s possible to prevent this
+                    by adding a \ at the end of the line. The following
+                    example:
+                    <code>
+                        print("""\
+                        Usage: thingy [OPTIONS]
+                        -h Display this usage message
+                        -H hostname Hostname to connect to
+                        """)
+                    </code> produces the following output (note that the initial newline is not included):
+                    <code>
+                        Usage: thingy [OPTIONS]
+                        -h Display this usage message
+                        -H hostname Hostname to connect to
+                    </code> Strings can be concatenated (glued together) with the + operator, and repeated with *:
+                    <code>
+                        >>> # 3 times 'un', followed by 'ium'
+                        >>> 3 * 'un' + 'ium'
+                        'unununium'
+                    </code> Two or more string literals (i.e. the ones enclosed between quotes) next to each other are
+                    automatically concatenated.
+                    <code>
+                        >>> 'Py' 'thon'
+                        'Python'
+                    </code> This feature is particularly useful when you want to break long strings:
+                    <code>
+                        >>> text = ('Put several strings within parentheses '
+                        ... 'to have them joined together.')
+                        >>> text
+                        'Put several strings within parentheses to have them joined together.'
+                    </code> This only works with two literals though, not with variables or expressions:
+                    <code>
+                        >>> prefix = 'Py'
+                        >>> prefix 'thon' # can't concatenate a variable and a string literal
+                        ...
+                        SyntaxError: invalid syntax
+                        >>> ('un' * 3) 'ium'
+                        ...
+                        SyntaxError: invalid syntax
+                    </code> If you want to concatenate variables or a variable and a literal, use +:
+                    <code>
+                        >>> prefix + 'thon'
+                        'Python'
+                    </code> Strings can be indexed (subscripted), with the first character having index 0. There is no
+                    separate character type; a character is simply a string of size one:
+                    <code>
+                        >>> word = 'Python'
+                        >>> word[0] # character in position 0
+                        'P'
+                        >>> word[5] # character in position 5
+                        'n'
+                    </code> Indices may also be negative numbers, to start counting from the right:
+                    <code>
+                        >>> word[-1] # last character
+                        'n'
+                        >>> word[-2] # second-last character
+                        'o'
+                        >>> word[-6]
+                        'P'
+                    </code> Note that since -0 is the same as 0, negative indices start from -1. In addition to
+                    indexing, slicing is also supported. While indexing is used to obtain individual characters,
+                    slicing allows you to obtain substring:
+                    <code>
+                        >>> word[0:2] # characters from position 0 (included) to 2 (excluded)
+                        'Py'
+                        >>> word[2:5] # characters from position 2 (included) to 5 (excluded)
+                        'tho'
+                    </code> Note how the start is always included, and the end always excluded. This makes sure that
+                    s[:i] + s[i:] is always equal to s:
+                    <code>
+                        >>> word[:2] + word[2:]
+                        'Python'
+                        >>> word[:4] + word[4:]
+                        'Python'
+                    </code> Slice indices have useful defaults; an omitted first index defaults to zero, an omitted
+                    second index defaults to the size of the string being sliced.
+                    <code>
+                        >>> word[:2] # character from the beginning to position 2 (excluded)
+                        'Py'
+                        >>> word[4:] # characters from position 4 (included) to the end
+                        'on'
+                        >>> word[-2:] # characters from the second-last (included) to the end
+                        'on'
+                    </code> One way to remember how slices work is to think of the indices as pointing between
+                    characters, with the left edge of the first character numbered 0. Then the right edge of the last
+                    character of a string of n characters has index n,
+                    for example:
+
+                    <code>
+                        +---+---+---+---+---+---+
+                        | P | y | t | h | o | n |
+                        +---+---+---+---+---+---+
+                        0 1 2 3 4 5 6
+                        -6 -5 -4 -3 -2 -1
+                    </code> The first row of numbers gives the position of the indices 0…6 in the string; the second
+                    row gives the corresponding negative indices. The slice from i to j consists of all characters
+                    between the edges labeled i and j, respectively.
+                    For non-negative indices, the length of a slice is the difference of the indices, if both are
+                    within bounds. For example, the length of word[1:3] is 2. Attempting to use an index that is too
+                    large will result in an error:
+                    <code>
+                        >>> word[42] # the word only has 6 characters
+                        Traceback (most recent call last):
+                        File "<stdin>", line 1, in <module>
+                                IndexError: string index out of range
+                    </code> However, out of range slice indexes are handled gracefully when used for slicing:
+                    <code>
+                        >>> word[4:42]
+                        'on'
+                        >>> word[42:]
+                        ''
+                    </code> Python strings cannot be changed — they are immutable. Therefore, assigning to an indexed
+                    position in the string results in an error:
+                    <code>
+                        >>> word[0] = 'J'
+                        ...
+                        TypeError: 'str' object does not support item assignment
+                        >>> word[2:] = 'py'
+                        ...
+                        TypeError: 'str' object does not support item assignment
+                    </code>
+                    <code>
+                        If you need a different string, you should create a new one:
+                    </code>
+                    <code>
+                        >>> 'J' + word[1:]
+                        'Jython'
+                        >>> word[:2] + 'py'
+                        'Pypy'
+                    </code> The built-in function len() returns the length of a string:
+                    <code>
+                        >>> s = 'supercalifragilisticexpialidocious'
+                        >>> len(s)
+                        34
+                    </code>
+                </p>
+                <h3 id="Lists">3.1.3. Lists</h3>
+                <p>
+                    Python knows a number of compound data types, used to group together other values. The most
+                    versatile is the list, which can be written as a list of comma-separated values (items) between
+                    square brackets. Lists might contain items of different types,
+                    but usually the items all have the same type.
+                    <code>
+                        >>> squares = [1, 4, 9, 16, 25]
+                        >>> squares
+                        [1, 4, 9, 16, 25]
+                    </code> Like strings (and all other built-in sequence type), lists can be indexed and sliced:
+                    <code>
+                        >>> squares[0] # indexing returns the item
+                        1
+                        >>> squares[-1]
+                        25
+                        >>> squares[-3:] # slicing returns a new list
+                        [9, 16, 25]
+                    </code> All slice operations return a new list containing the requested elements. This means that
+                    the following slice returns a new (shallow) copy of the list:
+                    <code>
+                        >>> squares[:]
+                        [1, 4, 9, 16, 25]
+                    </code> Lists also support operations like concatenation:
+                    <code>
+                        >>> squares + [36, 49, 64, 81, 100]
+                        [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+                    </code> Unlike strings, which are immutable, lists are a mutable type, i.e. it is possible to
+                    change their content:
+                    <code>
+                        >>> cubes = [1, 8, 27, 65, 125] # something's wrong here
+                        >>> 4 ** 3 # the cube of 4 is 64, not 65!
+                        64
+                        >>> cubes[3] = 64 # replace the wrong value
+                        >>> cubes
+                        [1, 8, 27, 64, 125]
+                    </code> You can also add new items at the end of the list, by using the append() method (we will
+                    see more about methods later):
+                    <code>
+                        >>> cubes.append(216) # add the cube of 6
+                        >>> cubes.append(7 ** 3) # and the cube of 7
+                        >>> cubes
+                        [1, 8, 27, 64, 125, 216, 343]
+                    </code> Assignment to slices is also possible, and this can even change the size of the list or
+                    clear it entirely:
+                    <code>
+                        >>> letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+                        >>> letters
+                        ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+                        >>> # replace some values
+                        >>> letters[2:5] = ['C', 'D', 'E']
+                        >>> letters
+                        ['a', 'b', 'C', 'D', 'E', 'f', 'g']
+                        >>> # now remove them
+                        >>> letters[2:5] = []
+                        >>> letters
+                        ['a', 'b', 'f', 'g']
+                        >>> # clear the list by replacing all the elements with an empty list
+                        >>> letters[:] = []
+                        >>> letters
+                        []
+                    </code> The built-in function len() also applies to lists:
+                    <code>
+                        >>> letters = ['a', 'b', 'c', 'd']
+                        >>> len(letters)
+                        4
+                    </code> It is possible to nest lists (create lists containing other lists), for example:
+                    <code>
+                        >>> a = ['a', 'b', 'c']
+                        >>> n = [1, 2, 3]
+                        >>> x = [a, n]
+                        >>> x
+                        [['a', 'b', 'c'], [1, 2, 3]]
+                        >>> x[0]
+                        ['a', 'b', 'c']
+                        >>> x[0][1]
+                        'b'
+                    </code>
+                </p>
+            </article>
+            <article id="First_Steps_Towards_Programming">
+                <h2>3.2. First Steps Towards Programming</h2>
+                <p>
+                    Of course, we can use Python for more complicated tasks than adding two and two together. For
+                    instance, we can write an initial sub-sequence of the Fibonacci series as follows:
+                    <code>
+                        >>> # Fibonacci series:
+                        ... # the sum of two elements defines the next
+                        ... a, b = 0, 1
+                        >>> while a < 10: ... print(a) ... a, b=b, a+b ... 0 1 1 2 3 5 8 </code> This example
+                            introduces several new features. <ul>
+                            <li>The first line contains a multiple assignment: the variables a and b simultaneously get
+                                the new values 0 and 1. On the last line this is used again, demonstrating that the
+                                expressions on the right-hand side are all evaluated first before any
+                                of the assignments take place. The right-hand side expressions are evaluated from the
+                                left to the right.</li>
+                            <li>The while loop executes as long as the condition (here: a
+                                < 10) remains true. In Python, like in C, any non-zero integer value is true; zero is
+                                    false. The condition may also be a string or list value, in fact any sequence;
+                                    anything with a non-zero length is true, empty sequences are false. The test used
+                                    in the example is a simple comparison. The standard comparison operators are
+                                    written the same as in C: < (less than),> (greater than), == (equal to),
+                                    <=( less than or equal to),>= (greater than or equal to) and != (not equal to).</li>
+                            <li>he body of the loop is indented: indentation is Python’s way of grouping statements. At
+                                the interactive prompt, you have to type a tab or space(s) for each indented line. In
+                                practice you will prepare more complicated input for Python with
+                                a text editor; all decent text editors have an auto-indent facility. When a compound
+                                statement is entered interactively, it must be followed by a blank line to indicate
+                                completion (since the parser cannot guess when you have typed the last
+                                line). Note that each line within a basic block must be indented by the same amount.</li>
+                            <li>The print() function writes the value of the argument(s) it is given. It differs from
+                                just writing the expression you want to write (as we did earlier in the calculator
+                                examples) in the way it handles multiple arguments, floating point quantities,
+                                and strings. Strings are printed without quotes, and a space is inserted between items,
+                                so you can format things nicely, like this:</li>
+                            </ul>
+                            <code>
+                                >>> i = 256*256
+                                >>> print('The value of i is', i)
+                                The value of i is 65536
+                            </code> The keyword argument end can be used to avoid the newline after the output, or end
+                            the output with a different string:
+                            <code>
+                                >>> a, b = 0, 1
+                                >>> while a < 1000: ... print(a, end=',' ) ... a, b=b, a+b ...
+                                    0,1,1,2,3,5,8,13,21,34,55,89,144,233,377,610,987, </code> </p> </article> </section>
+                                    <section class="main-section" id="More_Control_Flow_Tools">
+                                    <header>
+                                        <h1>More Control Flow Tools</h1>
+                                    </header>
+                                    <article>
+                                        <p>
+                                            Besides the while statement just introduced, Python knows the usual control
+                                            flow statements known from other languages, with some twists.
+                                        </p>
+                                    </article>
+        </section>
+        <section class="main-section" id="Data_Structures">
+            <header>
+                <h1>Data Structures</h1>
+            </header>
+            <article>
+                <p>
+                    This chapter describes some things you’ve learned about already in more detail, and adds some new
+                    things as well.
+                </p>
+            </article>
+        </section>
+    </main>
+
+</body>
+
+</html>
